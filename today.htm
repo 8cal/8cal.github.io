@@ -3291,7 +3291,7 @@ var gztxt = '今天是：'+solar.getYear()+'年'+solar.getMonth()+'月'+solar.ge
 gztxt = gztxt+'<span class="emph">'+solar.getLunar().getYearInGanZhi()+'</span>年'+'<span class="emph">'+solar.getLunar().getMonthInGanZhi()+'</span>月'+'<span class="emph">'+solar.getLunar().getDayInGanZhi()+'</span>日<br>時辰為：<br>';
 for(var i=0; i<12; i++){
 	sola = Solar.fromYmdHms(solar.getYear(), solar.getMonth(), solar.getDay(), i*2, 10, 0);
-    gztxt = gztxt+'<span class="emph">'+sola.getLunar().getTimeInGanZhi().charAt(1)+'</span>時：<span class="emph">'+sola.getLunar().getTimeInGanZhi().charAt(0)+'</span>';
+    gztxt = gztxt+sola.getLunar().getTimeInGanZhi().charAt(1)+'時：<span class="emph">'+sola.getLunar().getTimeInGanZhi().charAt(0)+'</span>';
     if(i==2 || i==5 || i==8 || i==11){
         gztxt=gztxt+'<br>'
     }
